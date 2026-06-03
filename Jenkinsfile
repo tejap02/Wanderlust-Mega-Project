@@ -11,20 +11,20 @@ pipeline {
 
         stage('Show Files') {
             steps {
-                bat 'dir'
+                sh 'ls -la'
             }
         }
 
         stage('Node Check') {
             steps {
-                bat 'node -v'
-                bat 'npm -v'
+                sh 'node -v'
+                sh 'npm -v'
             }
         }
 
         stage('Docker Check') {
             steps {
-                bat 'docker --version'
+                sh 'docker --version'
             }
         }
 
